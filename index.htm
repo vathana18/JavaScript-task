@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Function Declaration for Addition
+      function add(a, b) {
+        return a + b;
+      }
+      console.log(add(10, 5));
+
+      // 2. Function Expression for Subtraction
+      const subtract = function (a, b) {
+        return a - b;
+      };
+      console.log(subtract(10, 5));
+
+      // 3. Arrow Function for Multiplication
+      const multiply = (a, b) => {
+        return a * b;
+      };
+      console.log(multiply(10, 5));
+
+      // 4. Arrow Function (implicit return) for Division
+      const divide = (a, b) => a / b;
+      console.log(divide(10, 5));
+
+      // if else
+      function weatherAdvice(weather) {
+        if (weather === "sunny") {
+          return "It's a nice day! Wear sunglasses.";
+        } else {
+          return "Don't forget your umbrella!";
+        }
+      }
+      console.log(weatherAdvice("sunny")); // It's a nice day! Wear sunglasses.
+      console.log(weatherAdvice("foggy")); // Don't forget your umbrella!
+
+      // switch
+      function weatherAdviceSwitch(weather) {
+        switch (weather) {
+          case "sunny":
+            return "It's a nice day! Wear sunglasses.";
+          case "rainy":
+            return "Don't forget your umbrella!";
+          default:
+            return "drive carefully";
+        }
+      }
+      console.log(weatherAdviceSwitch("sunny")); // It's a nice day! Wear sunglasses.
+      console.log(weatherAdviceSwitch("rainy")); // Don't forget your umbrella!
+      console.log(weatherAdviceSwitch("storm")); // drive carefully
+
+      // loop
+      const scores = [95, 42, 78, 63, 29, 88, 51];
+      // for loop
+      for (let i = 0; i < scores.length; i++) {
+        console.log(`Score ${i + 1}: ${scores[i]}`);
+      }
+
+      // while loop
+      let index = 0;
+      while (index < scores.length) {
+        if (scores[index] >= 50) {
+          console.log(`Passing score: ${scores[index]}`);
+        }
+        index++;
+      }
+
+      // for...of
+      for (const score of scores) {
+        const status = score >= 50 ? "Pass" : "Fail";
+        console.log(`${score} - ${status}`);
+      }
+
+      // map
+      const boostedScores = scores.map((score) => score + 5);
+      console.log(boostedScores);
+
+      // filter
+      const passingScores = scores.filter((score) => score >= 50);
+      console.log(passingScores);
+
+      // reduce
+      const total = scores.reduce((sum, score) => sum + score, 0);
+      const average = total / scores.length;
+      console.log("Total:", total);
+      console.log("Average:", average);
+    </script>
+  </body>
+</html>
